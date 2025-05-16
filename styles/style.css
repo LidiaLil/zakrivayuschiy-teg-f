@@ -152,17 +152,10 @@
   position: relative;
   cursor: pointer;
   z-index: 1;
-  appearance: none;
-  overflow: hidden; 
-
+  overflow: hidden;
   &:focus {
     outline: none;
   }
-
-  &:hover {
-    cursor: pointer;
-  }
-
   &:focus-visible {
     box-shadow: 2px 2px 0 0 var(--accent-color); /*Тень сдвинута на 2px по X и Y, без размытия*/
     transition: box-shadow 0.3s ease; /*Плавное изменение тени*/
@@ -170,7 +163,7 @@
 }
 
 .button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -280,7 +273,6 @@
   flex-shrink: 0;
 }
 
-
 .dialog_save[open] .dialog_section {
   display: flex;
   align-items: center;
@@ -293,8 +285,6 @@
   padding: 30px;
   inline-size: clamp(341px, calc(337px + 1.13vw), 353px);
   block-size: 191px;
-  padding: 30px;
-  inline-size: 353px;
   overflow: hidden;
 }
 
@@ -312,8 +302,6 @@
   text-transform: inherit;
   font-weight: var(--regular-font-weight), 400;
   line-height: 150%;
-  text-transform: uppercase;
-
   text-align: left;
   width: fit-content;
   align-self: flex-start;
@@ -323,7 +311,6 @@
   inline-size: 100%;
   min-block-size: 38px;
 }
-
 
 @media (width <= 375px) {
   .cart_title {
