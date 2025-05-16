@@ -16,7 +16,7 @@
   font-family: var(--regular-font-family), sans-serif;
   font-variation-settings: "wght" var(--regular-font-weight), 400;
   font-size: var(--font-size), 18px;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color, #ffffff);
   display: flex;
   flex-flow: column nowrap; /* flex-direction + flex-wrap */
   align-items: center;
@@ -137,6 +137,7 @@
 .card_text {
   font-size: 18px; /*inherit;  либо var(--font-size), 18px;  не срабатывает в хроме*/
   padding-inline: 25px;
+  line-height: 21px;
 }
 
 .card_text p:not(:last-of-type) {
@@ -153,12 +154,12 @@
   cursor: pointer;
   z-index: 1;
   overflow: hidden;
+  transition: box-shadow 0.3s ease; /*Плавное изменение тени*/
   &:focus {
     outline: none;
   }
   &:focus-visible {
     box-shadow: 2px 2px 0 0 var(--accent-color); /*Тень сдвинута на 2px по X и Y, без размытия*/
-    transition: box-shadow 0.3s ease; /*Плавное изменение тени*/
   }
 }
 
@@ -198,18 +199,13 @@
   outline: 2px solid transparent;
   transition: outline 0.3s ease;
   align-self: center;
-  padding-inline: 0;
+  padding: 0;
   cursor: pointer;
 
   &:focus-visible {
     /* тоже самое  .card__icon-button:focus-visible*/
     outline-color: var(--border-color);
-    transition: outline 0.3s linear;
-  }
-
-  &:focus {
-    /* тоже самое  .card__icon-button:focus*/
-    outline: none;
+    outline-offset: -2px;
   }
 }
 
@@ -227,6 +223,8 @@
   block-size: 100%;
   padding-block: 12px;
   height: 38px;
+  display: flex;
+  align-items: center;
 }
 
 .button__text {
@@ -284,11 +282,10 @@
 .dialog_save[open] {
   padding: 30px;
   inline-size: clamp(341px, calc(337px + 1.13vw), 353px);
-  block-size: 191px;
-  overflow: hidden;
+  border: 2px solid var(--border-color);
 }
 
-.dialog_section[open]::backdrop {
+.dialog_save[open]::backdrop {
   background: #000;
   opacity: 0.75;
 }
@@ -318,10 +315,11 @@
     padding-block-end: 6px;
   }
 
-  .button__save {
+  .save_button {
     flex-direction: column;
     gap: 8px;
-    padding: 15px 0;
+    width: 312px;
+    height: 84px;
   }
 
   .floppy {
