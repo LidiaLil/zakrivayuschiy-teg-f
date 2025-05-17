@@ -51,6 +51,7 @@
   padding-block: clamp(120px, calc(117.18px + 0.751vw), 128px);
   text-transform: uppercase;
   font-family: var(--accent-font-family), fantasy;
+  font-variation-settings: "wght" var(--regular-font-weight), 400;
 }
 
 .header_logo {
@@ -59,6 +60,7 @@
 
 .header_title {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  font-variation-settings: "wght" var(--regular-font-weight), 400;
 }
 
 .content {
@@ -93,6 +95,7 @@
   padding-inline: 10px;
   padding-block: 3px;
   margin-bottom: 5px;
+  font-variation-settings: "wght" var(--regular-font-weight), 400;
 }
 
 .cart_label {
@@ -142,6 +145,7 @@
   font-size: 18px; /*inherit;  либо var(--font-size), 18px;  не срабатывает в хроме*/
   padding-inline: 25px;
   line-height: 21px;
+  font-variation-settings: "wght" var(--regular-font-weight), 400;
 }
 
 .card_text p:not(:last-of-type) {
@@ -306,6 +310,7 @@
   text-align: left;
   width: fit-content;
   align-self: flex-start;
+  text-transform: uppercase;
 }
 
 .dialog_close {
@@ -330,6 +335,7 @@
     block-size: 28px;
     inline-size: 28px;
   }
+
 }
 
 .brightness {
