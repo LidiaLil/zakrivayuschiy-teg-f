@@ -113,13 +113,17 @@
   font-family: var(--accent-font-family), fantasy;
   font-size: 14px;
   font-variation-settings: "wght" var(--regular-font-weight), 400;
-  -webkit-text-stroke: 1px var(--label-shadow);
-  text-stroke: 1px var(--label-shadow);
-  @supports not (
-    (text-stroke: 1px #ffffff) or (-webkit-text-stroke: 1px #ffffff)
-  ) {
-    text-shadow: -1px -1px 0 var(--label-shadow), -1px 1px 0 var(--label-shadow),
-      1px -1px 0 var(--label-shadow), 1px 1px 0 var(--label-shadow);
+  text-shadow: -1px -1px 0 var(--label-shadow), 
+               -1px 1px 0 var(--label-shadow),
+               1px -1px 0 var(--label-shadow), 
+               1px 1px 0 var(--label-shadow);
+}
+  
+  @supports  ((text-stroke: 1px var(--label-shadow)) or (-webkit-text-stroke: 1px var(--label-shadow))) {
+    .label_image {
+      -webkit-text-stroke: 1px var(--label-shadow);
+      text-stroke: 1px var(--label-shadow);
+      text-shadow: none;
   }
 }
 
