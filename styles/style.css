@@ -14,7 +14,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--regular-font-family), sans-serif;
-  font-variation-settings: "wght" var(--regular-font-weight), 400;
+  font-variation-settings: "wght" var(--regular-font-weight);
   font-size: var(--font-size), 18px;
   background-color: var(--bg-color, #ffffff);
   display: flex;
@@ -51,7 +51,7 @@
   padding-block: clamp(120px, calc(117.18px + 0.751vw), 128px);
   text-transform: uppercase;
   font-family: var(--accent-font-family), fantasy;
-  font-variation-settings: "wght" var(--regular-font-weight), 400;
+  font-variation-settings: "wght" var(--regular-font-weight);
 }
 
 .header_logo {
@@ -60,7 +60,7 @@
 
 .header_title {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  font-variation-settings: "wght" var(--regular-font-weight), 400;
+  font-variation-settings: "wght" var(--regular-font-weight);
 }
 
 .content {
@@ -92,7 +92,7 @@
   font-family: var(--regular-font-family), sans-serif;
   text-align: left;
   padding: 5px 10px;
-  font-variation-settings: "wght" var(--title-weight), 700;
+  font-variation-settings: "wght" var(--title-weight);
 }
 
 .cart_label {
@@ -112,7 +112,7 @@
   opacity: 0.5;
   font-family: var(--accent-font-family), fantasy;
   font-size: 14px;
-  font-variation-settings: "wght" var(--regular-font-weight), 400;
+  font-variation-settings: "wght" var(--regular-font-weight);
   text-shadow: -1px -1px 0 var(--label-shadow), 
                -1px 1px 0 var(--label-shadow),
                1px -1px 0 var(--label-shadow), 
@@ -142,7 +142,7 @@
   font-size: 18px; /*inherit;  либо var(--font-size), 18px;  не срабатывает в хроме*/
   padding-inline: 25px;
   line-height: 21px;
-  font-variation-settings: "wght" var(--regular-font-weight), 400;
+  font-variation-settings: "wght" var(--regular-font-weight);
 }
 
 .card_text p:not(:last-of-type) {
