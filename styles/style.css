@@ -90,12 +90,9 @@
 .cart_title {
   font-size: 18px; /*inherit;  либо var(--font-size), 18px;  не срабатывает*/
   font-family: var(--regular-font-family), sans-serif;
-  font-weight: 700;
   text-align: left;
-  padding-inline: 10px;
-  padding-block: 3px;
-  margin-bottom: 5px;
-  font-variation-settings: "wght" var(--regular-font-weight), 400;
+  padding: 5px 10px;
+  font-variation-settings: "wght" var(--title-weight), 700;
 }
 
 .cart_label {
@@ -318,11 +315,6 @@
 }
 
 @media (width <= 375px) {
-  .cart_title {
-    padding-block-start: 4px;
-    padding-block-end: 6px;
-  }
-
   .save_button {
     flex-direction: column;
     gap: 8px;
